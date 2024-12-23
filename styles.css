@@ -1,0 +1,411 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+/* General header styling */
+.responsive-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background: #fff;
+}
+
+/* Logo styling */
+.responsive-logo {
+    max-width: 150px;
+    height: auto;
+    transition: max-width 0.3s ease-in-out;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .responsive-header {
+        padding: 0.5rem;
+    }
+
+    .responsive-logo {
+        max-width: 100px;
+    }
+}
+
+/* Media query for very small screens (e.g., mobile phones) */
+@media (max-width: 480px) {
+    .responsive-logo {
+        max-width: 80px;
+    }
+}
+
+
+header {
+    background:black;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background: #00B1ED;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    padding: 1rem;
+    transition: background 0.3s;
+}
+
+nav a:hover {
+    background: #666;
+}
+.hero {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 1s ease-in-out;
+}
+
+.carousel-slide {
+    flex: 0 0 100%;
+    height: 100%;
+    position: relative;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.5rem;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background: #ddd;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.dot.active {
+    background: #333;
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+    margin: 2rem;
+}
+
+.product-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.product-card h3 {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+.product-card p {
+    margin: 1rem 0;
+    color: #666;
+}
+
+.add-to-cart {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: #45a049;
+}
+
+.cart-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    width: 250px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.cart-container h4 {
+    margin: 0 0 1rem 0;
+}
+
+.cart-items {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.checkout-btn {
+    margin-top: 1rem;
+    background-color: #FF6347;
+    color: white;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.checkout-btn:hover {
+    background-color: #e55347;
+}
+
+
+/* Styling for the categories container */
+.categories {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 2rem;
+}
+
+/* Category card styling */
+.category-card {
+    flex: 1;
+    min-width: 200px;
+    max-width: 300px;
+    background: #f4f4f4;
+    border-radius: 8px;
+    text-align: center;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.3s, border 0.3s;
+    position: relative;
+}
+
+/* Hover effect on category card */
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for the image inside category card */
+.category-card img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .category-card {
+        min-width: 150px; /* Make the cards smaller on mobile */
+        max-width: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .category-card {
+        min-width: 120px;
+        max-width: 200px; /* Adjust the cards for very small screens */
+    }
+}
+
+/* Styling for the button */
+.order-button {
+    display: inline-block;
+    margin-top: 1rem;
+    background: #4CAF50; /* Green color */
+    color: white;
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the button */
+.order-button:hover {
+    background: #45a049; /* Slightly darker green */
+}
+
+/* Button focus styling */
+.order-button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+
+
+footer {
+    background: #00B1ED;
+    color: black;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    position: relative; /* Position relative to contain the absolutely positioned developer-info */
+}
+
+/* Styling for the "Designed and Developed by" text */
+footer .developer-info {
+    position: absolute; /* Positioned relative to the footer */
+    bottom: 10px; /* Slight spacing from the bottom */
+    right: 10px; /* Spacing from the right */
+    text-align: right; /* Align text to the right */
+}
+
+/* Styling for the text inside the developer-info */
+footer .developer-info p {
+    font-size: 0.8rem; /* Slightly smaller text */
+    margin: 0; /* Remove default margin */
+    color: black;
+}
+
+/* Styling for the image */
+footer .developer-info .small-image {
+    width: 50px; /* Minimum size */
+    height: auto; /* Maintain aspect ratio */
+    display: inline-block; /* Inline with text */
+    margin-left: 10px; /* Add spacing from the text */
+    vertical-align: middle; /* Align image with text baseline */
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s ease-in-out;
+}
+
+.carousel-slide {
+    flex: 0 0 100%;
+    height: 100%;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Dots */
+.carousel-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background: #ddd;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.dot.active {
+    background: #333;
+}
+
+
+/* Modal Styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Black with opacity */
+}
+
+/* Modal Content Styling */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+/* Close Button Styling */
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Button Styling */
+button {
+    padding: 10px;
+    background-color: #0074CC;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #005A99;
+}
